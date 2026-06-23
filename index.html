@@ -8,18 +8,15 @@
     <link href="/src/assets/css/style.css" rel="stylesheet">
   </head>
   <body class="bg-[#161616]">
-    <header class="h-[750px] bg-cover relative"
+    <header class="h-[350px] md:h-[550px] xl:h-[650px] 2xl:h-[750px] bg-cover relative overflow-hidden px-2.5 2xl:px-0 bg-center"
     style="background-image: url('/src/assets/img/header.jpg')">
-      <div class="flex justify-between container mx-auto pt-8 pb-16">
-        <div>
+      
+      <div class="flex justify-between container mx-auto py-4 md:pt-8 md:pb-16 relative z-20">
+        <div class="hidden md:block">
           <div class="glassContainer before:rounded-[32px] after:rounded-[32px] px-8 py-4 flex gap-8 items-center">
             <div class="uppercase text-2xl text-white font-black flex items-center">
-              <span>
-                Iron
-              </span>
-              <span class="text-[#CCFF00]">
-                Mind
-              </span>
+              <span>Iron</span>
+              <span class="text-[#CCFF00]">Mind</span>
             </div>
             <div class="flex gap-4 items-center">
               <a href="#" class="text-white hover:text-gray-400 transition duration-300 ease-linear">Обо мне</a>
@@ -30,54 +27,93 @@
             </div>
           </div>
         </div>
-        <button class="font-bold py-4 px-8 bg-[#CCFF00] hover:bg-[#b2dd04] transition duration-300 ease-linear cursor-pointer rounded-4xl shadow-[0px_0px_58px_7px_#ccff00ad]">
+
+        <!-- Мобильная версия: логотип -->
+        <div class="md:hidden glassContainer before:rounded-[32px] after:rounded-[32px] py-4 px-6">
+          <div class="uppercase text-2xl text-white font-black flex items-center">
+            <span>Iron</span>
+            <span class="text-[#CCFF00]">Mind</span>
+          </div>
+        </div>
+
+        <button class="hidden md:block font-bold py-4 px-8 bg-[#CCFF00] hover:bg-[#b2dd04] transition duration-300 ease-linear cursor-pointer rounded-4xl shadow-[0px_0px_58px_7px_#ccff00ad]">
           Бесплатный разбор
         </button>
+
+        <!-- Бургер -->
+        <div class="md:hidden flex items-center">
+          <button id="burgerBtn" class="text-white focus:outline-none cursor-pointer">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
       </div>
-      <div class="flex gap-16 container mx-auto">
+
+      <div class="flex gap-4 md:gap-16 container mx-auto relative z-20 flex-wrap">
         <div>
-          <div class="text-8xl font-black text-white">
+          <div class="text-4xl md:text-6xl xl:text-8xl font-black text-white">
             ТВОЕ ТЕЛО — <br> 
             <span class="text-[#CCFF00]"> ЭТО ПРОЕКТ. </span> <br>
             Я ЕГО КУРАТОР.
           </div>
-          <div class="flex items-center gap-4">
-          <button class="font-bold py-4 px-8 bg-[#CCFF00] hover:bg-[#b2dd04] transition duration-300 ease-linear cursor-pointer rounded-4xl shadow-[0px_0px_58px_7px_#ccff00ad]">
-            Начать трансформацию
-          </button>
-          <div>
-            <div class="glassContainer before:rounded-[32px] after:rounded-[32px] px-8 py-4 text-white">
+          <div class="flex md:items-center gap-4 flex-col md:flex-row mt-4 md:mt-6">
+            <button class="font-bold px-3 py-2 md:py-4 md:px-8 bg-[#CCFF00] hover:bg-[#b2dd04] transition duration-300 ease-linear cursor-pointer rounded-4xl shadow-[0px_0px_58px_7px_#ccff00ad]">
+              Начать трансформацию
+            </button>
+            <div class="glassContainer justify-center before:rounded-[32px] after:rounded-[32px] px-3 py-2 md:py-4 md:px-8 text-white">
               Рассчитать план
             </div>
           </div>
         </div>
-      </div>
-      <div class="flex items-end">
-        <div class="glassContainer z-10 before:rounded-[32px] after:rounded-[32px] px-8 py-4 text-white flex items-center gap-3 mb-12">
-          <div>
+        <div class="hidden md:flex items-end">
+          <div class="glassContainer z-10 before:rounded-[32px] after:rounded-[32px] px-6 mx:px-8 py-4 text-white flex items-center gap-3 mb-12">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="48" height="48" rx="24" fill="#313131"/>
               <path d="M34.6668 37.3327V33.7771C34.6668 31.8911 34.0247 30.0824 32.8816 28.7488C31.7385 27.4152 30.1881 26.666 28.5716 26.666H19.4287C17.8122 26.666 16.2618 27.4152 15.1187 28.7488C13.9757 30.0824 13.3335 31.8911 13.3335 33.7771V37.3327" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M24.0002 21C27.6821 21 30.6668 18.3137 30.6668 15C30.6668 11.6863 27.6821 9 24.0002 9C20.3183 9 17.3335 11.6863 17.3335 15C17.3335 18.3137 20.3183 21 24.0002 21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </div>
-          <div class="flex flex-col">
-              <span class="text-white font-black">
-                ВАСИЛИЙ НИКОЛАЕВ
-              </span>
-              <span class="text-[#CCFF00]">
-                HEAD COACH & FOUNDER
-              </span>
+            <div class="flex flex-col">
+              <span class="text-white font-black">ВАСИЛИЙ НИКОЛАЕВ</span>
+              <span class="text-[#CCFF00]">HEAD COACH & FOUNDER</span>
             </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="absolute h-28 w-full bg-[#161616] bottom-[-25px] blur-[13px] z-70"
-    style="clip-path: ellipse(65% 86% at 50% 50%);">
-    </div>
-  </header>
-    <section class="relative">
-      <div class="absolute z-60 -top-10 left-35">
+
+      <div class="absolute h-28 w-[110%] 2xl:w-full bg-[#161616] bottom-[-80px] md:bottom-[-35px] blur-[13px] z-10"
+        style="clip-path: ellipse(65% 86% at 50% 50%);">
+      </div>
+
+      <!-- Мобильное меню -->
+      <div id="mobileMenu" class="fixed top-0 right-0 h-full w-72 bg-[#1a1a1a] shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex justify-between items-center p-6 border-b border-gray-700">
+          <div class="uppercase text-2xl text-white font-black flex items-center">
+            <span>Iron</span>
+            <span class="text-[#CCFF00]">Mind</span>
+          </div>
+          <button id="closeMenuBtn" class="text-white text-3xl cursor-pointer hover:text-gray-400 transition">&times;</button>
+        </div>
+        <nav class="flex flex-col p-6 space-y-6">
+          <a href="#" class="text-white text-xl hover:text-[#CCFF00] transition duration-300">Обо мне</a>
+          <a href="#" class="text-white text-xl hover:text-[#CCFF00] transition duration-300">Услуги</a>
+          <a href="#" class="text-white text-xl hover:text-[#CCFF00] transition duration-300">Процесс</a>
+          <a href="#" class="text-white text-xl hover:text-[#CCFF00] transition duration-300">Результаты</a>
+          <a href="#" class="text-white text-xl hover:text-[#CCFF00] transition duration-300">FAQ</a>
+          <button class="mt-4 font-bold py-4 px-8 bg-[#CCFF00] hover:bg-[#b2dd04] transition duration-300 ease-linear cursor-pointer rounded-4xl shadow-[0px_0px_58px_7px_#ccff00ad] w-full">
+            Бесплатный разбор
+          </button>
+        </nav>
+      </div>
+
+      <!-- Оверлей -->
+      <div id="overlay" class="fixed inset-0 bg-black/60 z-40 hidden md:hidden"></div>
+    </header>
+    <section class="relative overflow-hidden px-2.5 2xl:px-0">
+      <div class="absolute h-28 w-[110%] 2xl:w-full bg-[#161616] top-[-95px] blur-[13px] z-70"
+        style="clip-path: ellipse(65% 86% at 50% 50%);">
+      </div>
+      <div class="absolute z-60 -top-10 left-10 2xl:left-35">
         <div class="glassContainer px-11 py-23 before:rounded-[16px] after:rounded-[16px]">
           <svg width="69" height="73" viewBox="0 0 69 73" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M67.9343 25.4729L47.3598 4.82647C45.9389 3.40057 43.6365 3.40057 42.2156 4.82647L38.7434 8.31088C35.499 3.34212 29.9911 0 23.6418 0C13.614 0 5.45576 8.18684 5.45576 18.2497V41.7151L1.06569 46.1205C-0.355231 47.5464 -0.355231 49.8569 1.06569 51.2828L21.6413 71.9306C23.0622 73.3565 25.3646 73.3565 26.7855 71.9306L67.9343 30.6352C69.3552 29.2092 69.3552 26.8989 67.9343 25.4729ZM9.09296 18.2497C9.09296 10.1992 15.618 3.64994 23.6418 3.64994C28.9872 3.64994 33.6441 6.57117 36.1708 10.8926L9.09296 38.0651V18.2497ZM24.2128 69.3488L3.63716 48.7011L8.78138 43.5389L29.357 64.1866L24.2128 69.3488ZM31.9285 61.6061L11.3529 40.9584L37.0715 15.1497L57.6471 35.7973L31.9285 61.6061ZM60.2186 33.2157L39.6441 12.5692L44.7884 7.40695L65.364 28.0546L60.2186 33.2157Z" fill="#CCFF00"/>
@@ -94,7 +130,7 @@
         </div>
       </div>
 
-      <div class="absolute z-30 top-68 left-215">
+      <div class="absolute z-30 top-68 left-225 2xl:left-215">
         <div class="glassContainer p-8 before:rounded-[16px] after:rounded-[16px]">
           <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M43.125 29.9571L56.925 15.3809" stroke="#CCFF00" stroke-width="5.33333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -112,13 +148,18 @@
         </div>
       </div>
 
-      <div class="container mx-auto relative flex gap-14">
+      <div class="container mx-auto relative grid-cols-1 lg:grid-cols-2 grid gap-14">
         <div class="relative">
-          <div class="w-100 h-100 absolute left-48 top-12 z-50 rounded-full bg-[#D9D9D9] opacity-20 blur-[65px] shadow-[0px_ 0px_51px_25px_#d9d9d966]">
+          <div class="w-80 h-80 lg:w-100 lg:h-100 absolute left-40 md:left-48 top-12 z-50 rounded-full bg-[#D9D9D9] opacity-20 blur-[65px] shadow-[0px_ 0px_51px_25px_#d9d9d966]">
           </div>
-          <img class="z-50 relative w-[70vw]" src="/src/assets/img/person-1.png" alt="">
+          <div class="relative">
+            <div class="md:hidden absolute h-28 w-[130%] 2xl:w-full bg-[#161616] -left-20 bottom-[-80px] blur-[13px] z-70"
+              style="clip-path: ellipse(65% 86% at 50% 50%);">
+            </div>
+            <img class="z-50 relative top-[0px] md:top-[130px] xl:top-[50px] 2xl:top-0 2xl:w-full md:scale-130 xl:scale-110 2xl:scale-100" src="/src/assets/img/person-1.png" alt="">
+          </div>
         </div>
-        <div class="flex flex-col gap-8 z-50 relative py-5">
+        <div class="flex flex-col gap-8 z-50 relative pb-12 pt-5 2x:py-5">
           <h3 class="uppercase text-[#CCFF00] text-2xl font-black">Обо мне</h3>
           <div class="flex flex-col gap-4">
             <h4 class="uppercase text-white text-3xl font-black">Без воды. Только <br> дисциплина и результат.</h4>
@@ -154,19 +195,22 @@
       <svg class="absolute top-0 left-0 z-10" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M-1 1H1919M-1 0.5H1919M-1 70H1919M-1 139H1919M-1 208H1919M-1 277H1919M-1 346H1919M-1 415H1919M-1 484H1919M-1 1.5L-1 604.273M68 1.5V604.273M137 1.5V604.273M206 1.5V604.273M275 1.5V604.273M344 1.5V604.273M413 1.5V604.273M482 1.5V604.273M551 1.5V604.273M620 1.5V604.273M689 1.5V604.273M758 1.5V604.273M827 1.5V604.273M896 1.5V604.273M965 1.5V604.273M1034 1.5V604.273M1103 1.5V604.273M1172 1.5V604.273M1241 1.5V604.273M1310 1.5V604.273M1379 1.5V604.273M1448 1.5V604.273M1517 1.5V604.273M1586 1.5V604.273M1655 1.5V604.273M1724 1.5V604.273M1793 1.5V604.273M1862 1.5V604.273M1931 1.5V604.273" stroke="#E0E0E0" stroke-opacity="0.1"/>
         </svg>
-      <div class="absolute h-28 w-full bg-[#161616] bottom-[-50px] blur-[13px] z-50"
+      <div class="absolute h-28 w-full bg-[#161616] bottom-[-60px] blur-[13px] z-50"
         style="clip-path: ellipse(65% 86% at 50% 50%);">
       </div>
     </section>
-    <section class="relative">
+    <section class="relative overflow-hidden px-2.5 2xl:px-0">
+      <div class="absolute h-28 w-full bg-[#161616] top-[-70px] blur-[13px] z-50"
+        style="clip-path: ellipse(65% 86% at 50% 50%);">
+      </div>
       <div class="absolute right-0 -top-20">
-        <div class="relative">
+        <div class="relative -right-55 xl:-right-40 2xl:-right-0">
           <img src="/src/assets/img/person-2.png" alt="">
           <div class="w-130 h-135 absolute left-0 bottom-0 z-50 rounded-full bg-[#CCFF00]/6 blur-[65px] shadow-[0px_ 0px_51px_25px_#d9d9d966]">
           </div>
         </div>
       </div>
-      <div class="container mx-auto mt-5">
+      <div class="xl:container mx-auto mt-5">
         <div class="grid grid-cols-4">
           <div class="border border-[#E0E0E0]/20 p-4 flex flex-col gap-16">
             <div class="flex flex-col gap-4">
@@ -287,15 +331,18 @@
           </div>
         </div>
       </div>
-      <div class="absolute h-28 w-full bg-[#161616] bottom-[-50px] blur-[13px] z-50"
+      <div class="absolute h-28 w-full bg-[#161616] bottom-[-51px] blur-[13px] z-50"
         style="clip-path: ellipse(65% 86% at 50% 50%);">
       </div>
     </section>
-    <section class="relative" 
+    <section class="relative overflow-hidden bg-cover 2xl:bg-auto bg-no-repeat px-2.5 2xl:px-0" 
       style="background-image: url('/src/assets/img/person-3.jpg')">
+      <div class="absolute h-28 w-full bg-[#161616] top-[-70px] xl:top-[-70px] 2xl:top-[-80px] blur-[13px] z-50"
+        style="clip-path: ellipse(65% 86% at 50% 50%);">
+      </div>
       <div class="absolute inset-0 pointer-events-none z-10 bg-[radial-gradient(circle,_transparent_50%,_rgba(22,22,22,0.8)_100%)]"></div>
-      <div class="container mx-auto">
-        <div class="flex items-center gap-4">
+      <div class="container mx-auto py-10 2xl:pt-5">
+        <div class="flex items-center gap-4 mb-5">
           <span class="font-black text-white text-3xl">
             Выбери свой путь
           </span>
@@ -304,19 +351,19 @@
           </span>
         </div>
         <div class="flex gap">
-          <div class="ml-22">
-            <img src="/src/assets/img/person-4.png" alt="">
+          <div class="3xl:ml-22">
+            <img class="top-[40px] left-[-80px] 2xl:-top-14 2xl:left-30 relative w-[75vw] 2xl:w-full" src="/src/assets/img/person-4.png" alt="">
           </div>
-          <div id="sliderContainer" class="relative flex items-center mt-[50px] pb-[60px] w-[800px] mx-auto select-none">
+          <div id="sliderContainer" class="relative flex items-center mt-[50px] pb-[60px] w-[600px] xl:w-[800px] mx-auto select-none">
   
-            <div class="card rounded-[32px] absolute transition-all duration-500 ease-in-out w-[800px]" data-index="0">
+            <div class="card rounded-[32px] absolute transition-all duration-500 ease-in-out w-[600px] xl:w-[800px]" data-index="0">
               <div class="glassContainer rounded-[32px] before:rounded-[32px] after:rounded-[32px] overflow-hidden flex flex-col w-full relative" style="backdrop-filter: blur(10px);">
                 <div class="flex justify-center">
                   <div class="py-2 px-4 bg-[#CCFF00] rounded-bl-[16px] rounded-br-[16px]">
                     <span class="font-black text-black text-sm uppercase">Самый популярный</span>
                   </div>
                 </div>
-                <div class="flex flex-col py-8 px-4 gap-8">
+                <div class="flex flex-col py-4 xl:py-8 px-4 gap-5 xl:gap-8">
                   <div class="flex flex-col gap-4">
                     <div class="flex items-center justify-between">
                       <span class="text-[#CCFF00] font-bold text-2xl uppercase">Персональные <br> тренировки</span>
@@ -327,7 +374,7 @@
                         </svg>
                       </span>
                     </div>
-                    <div class="w-[50%]">
+                    <div class="w-[80%] xl:w-[50%]">
                       <p class="text-white">Для тех, кто ценит свое время. Полный план действий в твоем смартфоне с моей поддержкой.</p>
                     </div>
                   </div>
@@ -386,14 +433,14 @@
                     </span>
                   </div>
                 </div>
-                <div class="w-100 h-100 absolute -right-50 -bottom-50 z-10 rounded-full bg-[#CCFF00] blur-[25px] shadow-[0px_ 0px_51px_25px_#d9d9d966]">
+                <div class="w-80 h-80 xl:w-100 xl:h-100 absolute -right-50 -bottom-50 z-10 rounded-full bg-[#CCFF00] blur-[25px] shadow-[0px_ 0px_51px_25px_#d9d9d966]">
               </div>
               </div>
             </div>
 
-            <div class="card rounded-[32px] absolute transition-all duration-500 ease-in-out w-[800px]" data-index="1">
+            <div class="card rounded-[32px] absolute transition-all duration-500 ease-in-out w-[600px] xl:w-[800px]" data-index="1">
               <div class="glassContainer rounded-[32px] before:rounded-[32px] after:rounded-[32px] flex flex-col w-full" style="backdrop-filter: blur(10px);">
-                <div class="pt-9"></div> <div class="flex flex-col py-8 px-4 gap-8">
+                <div class="pt-9"></div> <div class="flex flex-col py-4 xl:py-8 px-4 gap-5 xl:gap-8">
                   <div class="flex flex-col gap-4">
                     <div class="flex items-center justify-between">
                       <span class="text-[#CCFF00] font-bold text-2xl uppercase">Индивидуальные <br> Занятия</span>
@@ -405,7 +452,7 @@
                         </svg>
                       </span>
                     </div>
-                    <div class="w-[50%]">
+                    <div class="w-[80%] xl:w-[50%]">
                       <p class="text-white">Индивидуальная работа в зале. Постановка техники, страховка, полный контроль процесса.</p>
                     </div>
                   </div>
@@ -462,12 +509,12 @@
         </div>
       </div>
 
-      <div class="absolute h-28 w-full bg-[#161616] bottom-[-50px] blur-[13px] z-50"
+      <div class="absolute h-28 w-full bg-[#161616] bottom-[-85px] bottom-[-50px] 2xl:bottom-[0px] blur-[13px] z-50"
         style="clip-path: ellipse(65% 86% at 50% 50%);">
       </div>
     </section>
-    <section class="relative">
-      <div class="container mx-auto flex flex-col gap-8">
+    <section class="relative overflow-hidden px-2.5 2xl:px-0">
+      <div class="container mx-auto flex flex-col gap-8 mb-20">
         <div class="flex items-center justify-between mt-12">
           <div class="flex flex-col gap-4">
             <span class="text-[#CCFF00] ">
@@ -478,7 +525,7 @@
             </span>
           </div>
           <div>
-            <a href="#" class="border-b border-[#CCFF00] text-white flex items-center group ">
+            <a href="#" class="border-b border-[#CCFF00] text-white flex items-center group gap-2">
               Хочу так же
               <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.6667 12L16.8165 6.68923L17 6.5L11.6667 1M16.8165 6.68923H1" class="group-hover:scale-110 transition duration-300 ease-linear" stroke="white" stroke-width="2" stroke-linecap="round"/>
@@ -486,13 +533,13 @@
             </a>
           </div>
         </div>
-        <div class="grid grid-cols-4 gap-8">
+        <div class="grid grid-cols-2 xl:grid-cols-4 gap-8">
           <div class="flex flex-col rounded-[16px] overflow-hidden">
             <div class="relative">
               <span class="absolute bg-[#CCFF00] rounded-[16px] left-4 top-4 px-4 py-2">
                 -15 кг
               </span>
-              <img src="/src/assets/img/person-5.jpg" alt="">
+              <img class="w-full object-center" src="/src/assets/img/person-5.jpg" alt="">
             </div>
             <div class="bg-[#434343]/20  p-4 flex flex-col gap-4 h-full">
               <h4 class="text-2xl font-black text-white">Михаил, 32 года</h4>
@@ -507,7 +554,7 @@
               <span class="absolute bg-[#CCFF00] rounded-[16px] left-4 top-4 px-4 py-2">
                 +8 кг мышц
               </span>
-              <img src="/src/assets/img/person-6.jpg" alt="">
+              <img class="w-full object-center" src="/src/assets/img/person-6.jpg" alt="">
             </div>
             <div class="bg-[#434343]/20  p-4 flex flex-col gap-4 h-full">
               <h4 class="text-2xl font-black text-white">Алексей, 25 лет</h4>
@@ -522,7 +569,7 @@
               <span class="absolute bg-[#CCFF00] rounded-[16px] left-4 top-4 px-4 py-2">
                 Рельеф
               </span>
-              <img src="/src/assets/img/person-7.jpg" alt="">
+              <img class="w-full object-center" src="/src/assets/img/person-7.jpg" alt="">
             </div>
             <div class="bg-[#434343]/20  p-4 flex flex-col gap-4 h-full">
               <h4 class="text-2xl font-black text-white">Елена, 28 лет</h4>
@@ -537,7 +584,7 @@
               <span class="absolute bg-[#CCFF00] rounded-[16px] left-4 top-4 px-4 py-2">
                 +3 кг мышц
               </span>
-              <img src="/src/assets/img/person-8.jpg" alt="">
+              <img class="w-full object-center" src="/src/assets/img/person-8.jpg" alt="">
             </div>
             <div class="bg-[#434343]/20  p-4 flex flex-col gap-4 h-full">
               <h4 class="text-2xl font-black text-white">Михаил, 32 года</h4>
@@ -552,12 +599,15 @@
         style="clip-path: ellipse(65% 86% at 50% 50%);">
       </div>
     </section>
-    <section class="relative">
-      <svg class="absolute top-0 left-0 z-10" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <section class="relative overflow-hidden px-2.5 2xl:px-0">
+      <div class="absolute h-28 w-full bg-[#161616] top-[-30px] blur-[13px] z-50"
+        style="clip-path: ellipse(65% 86% at 50% 50%);">
+      </div>
+      <svg class="absolute top-0 left-0 z-10 w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M-1 1H1919M-1 0.5H1919M-1 70H1919M-1 139H1919M-1 208H1919M-1 277H1919M-1 346H1919M-1 415H1919M-1 484H1919M-1 1.5L-1 604.273M68 1.5V604.273M137 1.5V604.273M206 1.5V604.273M275 1.5V604.273M344 1.5V604.273M413 1.5V604.273M482 1.5V604.273M551 1.5V604.273M620 1.5V604.273M689 1.5V604.273M758 1.5V604.273M827 1.5V604.273M896 1.5V604.273M965 1.5V604.273M1034 1.5V604.273M1103 1.5V604.273M1172 1.5V604.273M1241 1.5V604.273M1310 1.5V604.273M1379 1.5V604.273M1448 1.5V604.273M1517 1.5V604.273M1586 1.5V604.273M1655 1.5V604.273M1724 1.5V604.273M1793 1.5V604.273M1862 1.5V604.273M1931 1.5V604.273" stroke="#E0E0E0" stroke-opacity="0.1"/>
       </svg>
       <div class="container mx-auto">
-        <div class="flex flex-col gap-8 mt-24">
+        <div class="flex flex-col gap-8 my-24">
           <div class="flex justify-center">
             <div class="flex flex-col gap-4 items-center">
               <span class="text-[#CCFF00]">
@@ -632,16 +682,16 @@
         </div>
       </div>
     </section>
-    <section class="relative pt-10">
+    <section class="relative overflow-hidden pt-10 px-2.5 2xl:px-0 mb-32 xl:mb-20">
       <div class="container mx-auto">
         <div class="flex">
           <div class="relative">
             <div class="w-100 h-100 absolute left-48 top-12 z-10 rounded-full bg-[#CCFF00]/5 blur-[65px] shadow-[0px_ 0px_51px_25px_#d9d9d966]">
             </div>
-            <img class="relative right-[-110px] z-20" src="/src/assets/img/person-9.png" alt="">
+            <img class="relative right-[-80px] top-[50px] xl:right-[-110px] xl:top-0 z-20" src="/src/assets/img/person-9.png" alt="">
           </div>
           <div>
-            <div class="bg-[#202020] rounded-4xl p-8 flex flex-col justify-between gap-32 relative overflow-hidden">
+            <div class="bg-[#202020] rounded-4xl p-8 flex flex-col justify-between gap-18 2xl:gap-32 relative overflow-hidden">
               <div class="flex flex-col gap-8">
                 <div class="flex flex-col gap-4">
                   <h4 class="text-white font-black text-3xl">
@@ -674,7 +724,7 @@
           </div>
         </div>
       </div>
-      <div class="absolute h-28 w-full bg-[#161616] bottom-[15px] blur-[13px] z-50"
+      <div class="absolute h-28 w-full bg-[#161616] bottom-[-95px] xl:bottom-[10px] blur-[13px] z-50"
         style="clip-path: ellipse(65% 86% at 50% 50%);">
       </div>
     </section>
@@ -691,10 +741,10 @@
       <feDisplacementMap id="disp" in="blur" in2="map" scale="1" xChannelSelector="R" yChannelSelector="G" />
     </filter>
   </svg>
-  <footer class="container mx-auto flex flex-col relative">
+  <footer class="container mx-auto flex flex-col relative px-2.5 2xl:px-0">
     <div class="flex justify-between pb-8 border-b border-[#FFFFFF]/10">
       <div class="flex gap-8">
-        <div class="flex flex-col gap-4 w-[40%]">
+        <div class="flex flex-col gap-4 w-[30%] xl:w-[25%] 2xl:w-[40%]">
           <div class="uppercase text-3xl text-white font-black flex items-center">
             <span>
               Iron
@@ -703,7 +753,7 @@
               Mind
             </span>
           </div>
-          <p class="text-[#9CA3AF] w-[60%]">
+          <p class="text-[#9CA3AF] 2xl:w-[60%]">
             Профессиональный персональный
             тренинг. Строим дисциплину, тело
             и характер без компромиссов.
@@ -727,7 +777,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col gap-6 w-[25%]">
+        <div class="flex flex-col gap-6 2xl:w-[25%]">
           <h4 class="text-sm font-black uppercase text-white">Меню</h4>
           <div class="flex flex-col gap-3">
             <a class="flex gap-2 items-center hover:opacity-60 transition duration-300 ease-linear" href="#">
@@ -797,7 +847,7 @@
         </div>
 
       </div>
-      <div class="flex flex-col gap-4 w-[15%]">
+      <div class="flex flex-col gap-4 w-[35%] xl:w-[25%] 2xl:w-[15%]">
         <h4 class="text-sm text-white font-black">Срочный вопрос?</h4>
         <p class="text-[#9CA3AF] text-sm">
           Напиши мне в Telegram, я отвечу
@@ -833,5 +883,6 @@
     </div>
   </footer>
   <script src="/src/assets/js/cards-slider.js"></script>
+  <script src="/src/assets/js/mob-menu.js"></script>
   </body>
 </html>

@@ -12,14 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             card.classList.remove(
-                "translate-x-[-110px]", "translate-y-0", "scale-100", "z-20", "pointer-events-auto", "shadow-[0px_0px_58px_7px_#ccff00ad]",
-                "translate-x-[40px]", "translate-y-[30px]", "scale-[0.94]", "z-10", "pointer-events-none",
+                "translate-x-[-270px]","2xl:translate-x-[-110px]", "translate-y-0", "scale-100", "z-20", "pointer-events-auto", "shadow-[0px_0px_58px_7px_#ccff00ad]",
+                "translate-x-[-195px]","2xl:translate-x-[40px]", "translate-y-[30px]", "scale-[0.94]", "z-10", "pointer-events-none",
                 "translate-x-[80px]", "translate-y-[60px]", "scale-[0.88]", "z-0"
             );
 
             if (offset === 0) {
                 card.classList.add(
-                    "translate-x-[-110px]", 
+                    "translate-x-[-270px]",
+                    "2xl:translate-x-[-110px]", 
                     "translate-y-0",
                     "scale-100", 
                     "z-20", 
@@ -29,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (offset === 1 || (offset === -1 && cards.length === 2)) {
                 // Карточка на заднем плане
                 card.classList.add(
-                    "translate-x-[40px]", 
+                    "translate-x-[-195px]",
+                    "2xl:translate-x-[40px]", 
                     "translate-y-[30px]", 
                     "scale-[0.94]", 
                     "z-10", 
