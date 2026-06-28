@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Intro';
-    src: url('../fonts/intro_regular.ttf') format('truetype');
+    src: url('../../../public/fonts/intro_regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'Intro';
-    src: url('../fonts/intro_bold.ttf') format('truetype');
+    src: url('../../../public/fonts/intro_bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
     font-family: 'Intro';
-    src: url('../fonts/intro-Black-Caps.ttf') format('truetype');
+    src: url('../../../public/fonts/intro-Black-Caps.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
